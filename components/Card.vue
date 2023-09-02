@@ -1,5 +1,6 @@
 <script setup lang="ts">
 type Props = {
+  id: string;
   icon: string;
   title: string;
 };
@@ -8,7 +9,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <section class="p-5 bg-white rounded-xl">
+  <section :id="id" class="p-5 bg-white rounded-xl">
     <header class="flex items-center mb-3">
       <font-awesome-icon
         :icon="`fa-solid fa-${icon}`"
