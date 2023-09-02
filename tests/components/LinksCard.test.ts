@@ -12,13 +12,13 @@ describe("LinksCard", () => {
     title: "Test Title",
     pages: [
       {
-        favicon: "./favicon.ico",
+        icon: "./favicon.ico",
         title: "Page1",
         link: "/page1",
         githubLink: "https://github.com/page1",
       },
       {
-        favicon: "./favicon.ico",
+        icon: "./favicon.ico",
         title: "Page2",
         link: "/page2",
       },
@@ -44,7 +44,7 @@ describe("LinksCard", () => {
     expect(wrapper.findAll("li").length).toBe(3);
   });
 
-  test("renders favicon correctly", () => {
+  test("renders icon correctly", () => {
     const wrapper = mount(LinksCard, {
       props,
     });

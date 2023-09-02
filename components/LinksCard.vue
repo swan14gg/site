@@ -7,7 +7,7 @@ type Props = {
   icon: string;
   title: string;
   pages: {
-    favicon?: string;
+    icon?: string;
     title: string;
     link: string;
     githubLink?: string;
@@ -22,7 +22,7 @@ defineProps<Props>();
     <ul>
       <li v-for="page in pages" :key="page.title" class="flex items-center p-2">
         <img
-          :src="page.favicon ? page.favicon : unknown"
+          :src="page.icon ? page.icon : unknown"
           class="w-4 md:w-5 me-3"
           width="20"
           height="20"
