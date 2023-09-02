@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest";
 import { mount } from "@vue/test-utils";
-import AboutMe from "@/components/section/AboutMe.vue";
+import AboutMe from "@/components/sections/AboutMe.vue";
 
 describe("AboutMe", () => {
   test("mounts successfully", () => {

@@ -1,5 +1,5 @@
 <template>
   <NuxtLayout>
-    <SectionAboutMe />
+    <SectionsAboutMe />
   </NuxtLayout>
 </template>
