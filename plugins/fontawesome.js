@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // 使用するアイコンをここでインポートする
 // 例
-// import { faHouse } from "@fortawesome/free-solid-svg-icons";
-// library.add(faHouse);
-import { faUser, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faStar, faGamepad } from "@fortawesome/free-solid-svg-icons";
 library.add(faUser);
 library.add(faStar);
+library.add(faGamepad);
 
 config.autoAddCss = false;
 

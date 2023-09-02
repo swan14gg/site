@@ -4,6 +4,7 @@
       <SectionsAboutMe />
       <div class="grid md:grid-cols-2 gap-4">
         <SectionsApplications />
+        <SectionsGames />
       </div>
     </div>
   </NuxtLayout>
