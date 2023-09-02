@@ -6,6 +6,9 @@
         <SectionsApplications />
         <SectionsGames />
       </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <SectionsArticles />
+      </div>
     </div>
   </NuxtLayout>
 </template>

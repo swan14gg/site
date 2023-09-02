@@ -2,6 +2,7 @@
 import unknown from "@/assets/img/unknown.png";
 
 export type LinkProps = {
+  emoji?: string;
   iconUrl?: string;
   title: string;
   pageUrl: string;
@@ -16,13 +17,16 @@ defineProps<LinkProps>();
 
 <template>
   <li class="flex items-center p-2">
-    <img
-      :src="iconUrl ? iconUrl : unknown"
-      :alt="title"
-      class="w-4 md:w-5 me-3"
-      width="20"
-      height="20"
-    />
+    <div class="me-2">
+      <span v-if="emoji">{{ emoji }}</span>
+      <img
+        v-else
+        :src="iconUrl ? iconUrl : unknown"
+        :alt="title"
+        width="20"
+        height="20"
+      />
+    </div>
     <NuxtLink :to="pageUrl" class="link">
       {{ title }}
     </NuxtLink>
