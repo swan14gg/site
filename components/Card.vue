@@ -15,7 +15,7 @@ defineProps<Props>();
         class="w-4 md:w-5 me-3"
       />
       <h2 class="lg:text-lg font-bold">{{ title }}</h2>
-      <slot />
     </header>
+    <slot />
   </section>
 </template>
