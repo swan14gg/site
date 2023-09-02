@@ -1,16 +1,26 @@
 <script setup lang="ts">
-const pages = [
+import github from "@/assets/img/github-mark.svg";
+
+const links = [
   {
-    icon: "https://book-search.app.swan14gg.dev/favicon.ico",
+    iconUrl: "https://book-search.app.swan14gg.dev/favicon.ico",
     title: "Book Search",
-    link: "https://book-search.app.swan14gg.dev",
-    githubLink: "https://github.com/swan14gg/book-search",
+    pageUrl: "https://book-search.app.swan14gg.dev",
+    sub: {
+      iconUrl: github,
+      alt: "GitHub Icon",
+      link: "https://github.com/swan14gg/book-search",
+    },
   },
   {
-    icon: "https://training-timer.app.swan14gg.dev/favicon.ico",
+    iconUrl: "https://training-timer.app.swan14gg.dev/favicon.ico",
     title: "Training Timer",
-    link: "https://training-timer.app.swan14gg.dev",
-    githubLink: "https://github.com/swan14gg/training-timer",
+    pageUrl: "https://training-timer.app.swan14gg.dev",
+    sub: {
+      iconUrl: github,
+      alt: "GitHub Icon",
+      link: "https://github.com/swan14gg/training-timer",
+    },
   },
 ];
 </script>
@@ -20,6 +30,6 @@ const pages = [
     id="applications"
     title="Applications"
     icon="star"
-    :pages="pages"
+    :links="links"
   />
 </template>

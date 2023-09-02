@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const pages = [
+import github from "@/assets/img/github-mark.svg";
+
+const links = [
   {
-    icon: "https://swan14gg.github.io/minesweeper/favicon.ico",
+    iconUrl: "https://swan14gg.github.io/minesweeper/favicon.ico",
     title: "minesweeper",
-    link: "https://swan14gg.github.io/minesweeper",
-    githubLink: "https://github.com/swan14gg/minesweeper",
+    pageUrl: "https://swan14gg.github.io/minesweeper",
+    sub: {
+      iconUrl: github,
+      alt: "GitHub Icon",
+      link: "https://github.com/swan14gg/minesweeper",
+    },
   },
 ];
 </script>
 
 <template>
-  <LinksCard id="games" title="Games" icon="gamepad" :pages="pages" />
+  <LinksCard id="games" title="Games" icon="gamepad" :links="links" />
 </template>
