@@ -19,13 +19,11 @@ const account = "swan14gg";
       />
       <div class="text-sm sm:text-base">
         <p class="font-bold text-lg sm:text-2xl sm:mb-2">Daiki</p>
+
+        <p>I'm currently working as a web developer in Fukuoka.</p>
         <p>
-          I'm currently working at <strong>Fukuoka</strong>
-          as a web developer.
-        </p>
-        <p>
-          I'm interested in Frontend development using
-          <strong>TypeScript</strong>, <strong>Nuxt.js</strong>,
+          I'm interested in frontend development, particularly using
+          <strong>TypeScript</strong>, <strong>Nuxt.js</strong>, and
           <strong>Vue.js</strong>.
         </p>
         <div class="flex mt-4 gap-3">
