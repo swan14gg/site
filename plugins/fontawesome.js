@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // 例
 // import { faHouse } from "@fortawesome/free-solid-svg-icons";
 // library.add(faHouse);
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faStar } from "@fortawesome/free-solid-svg-icons";
 library.add(faUser);
+library.add(faStar);
 
 config.autoAddCss = false;
 
