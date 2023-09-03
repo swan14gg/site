@@ -9,6 +9,7 @@ import {
   faGamepad,
   faFilePen,
   faNoteSticky,
+  faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
@@ -16,6 +17,7 @@ library.add(faStar);
 library.add(faGamepad);
 library.add(faFilePen);
 library.add(faNoteSticky);
+library.add(faCircleExclamation);
 
 config.autoAddCss = false;
 
