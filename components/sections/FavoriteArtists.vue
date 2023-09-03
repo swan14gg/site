@@ -13,7 +13,7 @@ const links = [
   {
     emoji: "🧸",
     title: "warbear",
-    pageUrl: "https://birdbearhareandfish.com/",
+    pageUrl: "https://warbear.jp/",
   },
 ];
 </script>
