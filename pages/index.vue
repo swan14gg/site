@@ -8,6 +8,7 @@
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <SectionsArticles />
+        <SectionsScraps />
       </div>
     </div>
   </NuxtLayout>

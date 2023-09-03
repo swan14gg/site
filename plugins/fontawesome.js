@@ -8,12 +8,14 @@ import {
   faStar,
   faGamepad,
   faFilePen,
+  faNoteSticky,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
 library.add(faStar);
 library.add(faGamepad);
 library.add(faFilePen);
+library.add(faNoteSticky);
 
 config.autoAddCss = false;
 
