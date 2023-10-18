@@ -19,7 +19,7 @@ const links = [
     sub: {
       iconUrl: github,
       alt: "GitHub Icon",
-      link: "https://github.com/swan14gg/old_training-timer",
+      link: "https://github.com/swan14gg/training-timer",
     },
   },
 ];
