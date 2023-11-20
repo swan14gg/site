@@ -1,31 +1,62 @@
+// Qiita
+
 type ArticleResponse = {
-  articles: Article[];
-  next_page: number | null;
-};
+  rendered_body: string;
+  body: string;
+  coediting: boolean;
+  comments_count: number;
+  created_at: string; // ISO8601形式の日付文字列
+  group: {
+    created_at: string;
+    description: string;
+    name: string;
+    private: boolean;
+    updated_at: string;
+    url_name: string;
+  };
+  id: string;
+  likes_count: number;
+  private: boolean;
+  reactions_count: number;
+  stocks_count: number;
+  tags: Array<{
+    name: string;
+    versions: string[];
+  }>;
+  title: string;
+  updated_at: string;
+  url: string;
+  user: {
+    description: string;
+    facebook_id: string;
+    followees_count: number;
+    followers_count: number;
+    github_login_name: string;
+    id: string;
+    items_count: number;
+    linkedin_id: string;
+    location: string;
+    name: string;
+    organization: string;
+    permanent_id: number;
+    profile_image_url: string;
+    team_only: boolean;
+    twitter_screen_name: string;
+    website_url: string;
+  };
+  page_views_count: number;
+  team_membership: {
+    name: string;
+  };
+  organization_url_name: string;
+  slide: boolean;
+}[];
+
+// Zenn
 
 type ScrapResponse = {
   scraps: Scrap[];
   next_page: number | null;
-};
-
-type Article = {
-  id: number;
-  post_type: "Article";
-  title: string;
-  slug: string;
-  published: boolean;
-  comments_count: number;
-  liked_count: number;
-  body_letters_count: number;
-  article_type: "tech" | "idea";
-  emoji: string;
-  is_suspending_private: boolean;
-  published_at: string;
-  body_updated_at: string;
-  source_repo_updated_at: string;
-  path: string;
-  user: User;
-  publication: Publication | null;
 };
 
 type User = {
@@ -33,15 +64,6 @@ type User = {
   username: string;
   name: string;
   avatar_small_url: string;
-};
-
-type Publication = {
-  id: number;
-  name: string;
-  avatar_small_url: string;
-  display_name: string;
-  beta_stats: boolean;
-  avatar_registered: boolean;
 };
 
 type Scrap = {
