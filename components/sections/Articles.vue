@@ -1,21 +1,23 @@
 <script setup lang="ts">
-const { fetchArticles } = useZenn();
+import qiitaIcon from "@/assets/img/favicon.png";
 
-const { data, pending, error } = await fetchArticles();
+const { fetchArticles } = useArticle();
+
+const { data, pending, error } = await fetchArticles(1);
 
 const links =
   data.value === null
     ? []
-    : data.value.articles.map((article) => ({
-        emoji: article.emoji,
+    : data.value.map((article) => ({
+        iconUrl: qiitaIcon,
         title: article.title,
-        pageUrl: `https://zenn.dev/${article.user.username}/articles/${article.slug}`,
+        pageUrl: `https://qiita.com/${article.user.id}/items/${article.id}`,
       }));
 
 const alternative = computed(() => {
   if (error.value !== null) {
     return "Failed to fetch articles. 😢";
-  } else if (data.value?.articles.length === 0) {
+  } else if (data.value?.length === 0) {
     return "No articles. 🤣";
   } else {
     return "";

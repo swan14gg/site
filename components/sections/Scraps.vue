@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import zenn from "@/assets/img/logo-only.svg";
 
-const { fetchScraps } = useZenn();
+const { fetchScraps } = useArticle();
 
 const { data, pending, error } = await fetchScraps();
 

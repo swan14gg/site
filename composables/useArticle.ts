@@ -1,14 +1,16 @@
-const useZenn = () => {
+const useArticle = () => {
   const username = "swan14gg";
 
-  const fetchArticles = async (count: number = 5) => {
-    return await useFetch<ArticleResponse>("https://zenn.dev/api/articles/", {
-      params: {
-        username,
-        order: "latest",
-        count,
+  const fetchArticles = async (page: number, per_page: number = 5) => {
+    return await useFetch<ArticleResponse>(
+      `https://qiita.com/api/v2/users/${username}/items`,
+      {
+        params: {
+          page,
+          per_page,
+        },
       },
-    });
+    );
   };
 
   const fetchScraps = async (count: number = 5) => {
@@ -26,4 +28,4 @@ const useZenn = () => {
     fetchScraps,
   };
 };
-export default useZenn;
+export default useArticle;

@@ -3,6 +3,7 @@ import profile from "@/assets/img/profile.jpeg";
 import x from "@/assets/img/logo.svg";
 import github from "@/assets/img/github-mark.svg";
 import zenn from "@/assets/img/logo-only.svg";
+import qiita from "@/assets/img/favicon.png";
 
 const account = "swan14gg";
 </script>
@@ -32,6 +33,9 @@ const account = "swan14gg";
           </NuxtLink>
           <NuxtLink :to="`https://github.com/${account}`">
             <img :src="github" alt="GitHub logo" width="20" height="20" />
+          </NuxtLink>
+          <NuxtLink :to="`https://qiita.com/${account}`">
+            <img :src="qiita" alt="Qiita logo" width="20" height="20" />
           </NuxtLink>
           <NuxtLink :to="`https://zenn.dev/${account}`">
             <img :src="zenn" alt="Zenn logo" width="20" height="20" />
