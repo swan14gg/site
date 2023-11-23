@@ -9,7 +9,10 @@ defineProps<Props>();
 </script>
 
 <template>
-  <section :aria-labelledby="`${id}-heading`" class="p-5 bg-white rounded-xl">
+  <section
+    :aria-labelledby="`${id}-heading`"
+    class="p-5 bg-white dark:bg-gray-600 rounded-xl"
+  >
     <header class="flex items-center mb-3">
       <ClientOnly>
         <font-awesome-icon

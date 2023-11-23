@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-100 min-h-screen">
+  <div class="bg-gray-100 dark:bg-gray-500 dark:text-white min-h-screen">
     <header
-      class="p-3 lg:p-4 font-bold text-xl lg:text-2xl bg-white flex justify-between"
+      class="p-3 lg:p-4 font-bold text-xl lg:text-2xl bg-white dark:bg-gray-700 flex justify-between"
     >
       <h1>swan14gg.dev</h1>
       <ToggleTheme />

@@ -27,7 +27,7 @@ const account = "swan14gg";
           <strong>TypeScript</strong>, <strong>Nuxt.js</strong>, and
           <strong>Vue.js</strong>.
         </p>
-        <div class="flex mt-4 gap-4">
+        <div class="flex mt-3 gap-4 p-2">
           <NuxtLink :to="`https://x.com/${account}`">
             <img :src="x" alt="X logo" width="20" height="20" />
           </NuxtLink>
