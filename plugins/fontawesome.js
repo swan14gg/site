@@ -11,6 +11,8 @@ import {
   faNoteSticky,
   faCircleExclamation,
   faMusic,
+  faSun,
+  faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
@@ -20,6 +22,8 @@ library.add(faFilePen);
 library.add(faNoteSticky);
 library.add(faCircleExclamation);
 library.add(faMusic);
+library.add(faSun);
+library.add(faMoon);
 
 config.autoAddCss = false;
 
