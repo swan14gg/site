@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const colorMode = useColorMode();
 
+const isDark = ref(colorMode.value === "dark");
+
 function handleThemeChange(event: Event) {
   const inputElement = event.target as HTMLInputElement;
   colorMode.preference = inputElement.checked ? "dark" : "light";
@@ -15,6 +17,7 @@ function handleThemeChange(event: Event) {
     <label for="toggleTwo" class="flex items-center cursor-pointer select-none">
       <div class="relative">
         <input
+          v-model="isDark"
           type="checkbox"
           id="toggleTwo"
           class="peer sr-only"
