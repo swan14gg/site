@@ -13,6 +13,7 @@ import {
   faMusic,
   faSun,
   faMoon,
+  faPersonChalkboard,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
@@ -24,6 +25,7 @@ library.add(faCircleExclamation);
 library.add(faMusic);
 library.add(faSun);
 library.add(faMoon);
+library.add(faPersonChalkboard);
 
 config.autoAddCss = false;
 
