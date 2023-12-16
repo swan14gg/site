@@ -9,8 +9,8 @@ export type LinkProps = {
     | { iconUrl?: undefined; alt?: undefined; text: string }
   );
 } & (
-  | { iconUrl: undefined; emoji: string }
-  | { iconUrl: string; emoji: undefined }
+  | { iconUrl?: undefined; emoji: string }
+  | { iconUrl: string; emoji?: undefined }
 );
 
 defineProps<LinkProps>();
