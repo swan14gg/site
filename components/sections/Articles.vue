@@ -12,6 +12,9 @@ const links =
         iconUrl: qiitaIcon,
         title: article.title,
         pageUrl: `https://qiita.com/${article.user.id}/items/${article.id}`,
+        sub: {
+          text: article.created_at.slice(0, 10).replaceAll("-", "/"),
+        },
       }));
 
 const alternative = computed(() => {

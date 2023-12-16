@@ -11,9 +11,9 @@ defineProps<Props>();
 <template>
   <section
     :aria-labelledby="`${id}-heading`"
-    class="p-5 bg-white dark:bg-gray-600 rounded-xl"
+    class="p-3 sm:p-5 bg-white dark:bg-gray-600 rounded-xl"
   >
-    <header class="flex items-center mb-3">
+    <header class="flex items-center mb-2 sm:mb-3">
       <ClientOnly>
         <font-awesome-icon
           :icon="`fa-solid fa-${icon}`"

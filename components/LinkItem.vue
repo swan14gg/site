@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import unknown from "@/assets/img/unknown.png";
-
 export type LinkProps = {
-  emoji?: string;
-  iconUrl?: string;
   title: string;
   pageUrl: string;
   sub?: {
-    iconUrl: string;
-    alt: string;
-    link: string;
-  };
-};
+    link?: string;
+  } & (
+    | { iconUrl: string; alt: string; text?: undefined }
+    | { iconUrl?: undefined; alt?: undefined; text: string }
+  );
+} & (
+  | { iconUrl?: undefined; emoji: string }
+  | { iconUrl: string; emoji?: undefined }
+);
+
 defineProps<LinkProps>();
 </script>
 
 <template>
   <li class="flex items-center p-2">
-    <div class="me-2">
-      <span v-if="emoji">{{ emoji }}</span>
-      <img
-        v-else
-        :src="iconUrl ? iconUrl : unknown"
-        :alt="title"
-        width="20"
-        height="20"
-      />
+    <div class="grid grid-cols-[20px_1fr] items-center gap-2">
+      <span v-if="emoji !== undefined">{{ emoji }}</span>
+      <img v-else :src="iconUrl" :alt="title" width="20" height="20" />
+      <NuxtLink :to="pageUrl" class="link text-sm sm:text-base">
+        {{ title }}
+      </NuxtLink>
     </div>
-    <NuxtLink :to="pageUrl" class="link">
-      {{ title }}
-    </NuxtLink>
-    <NuxtLink v-if="sub" :to="sub.link" class="ms-auto">
-      <img :src="sub.iconUrl" :alt="sub.alt" width="20" height="20" />
-    </NuxtLink>
+    <div v-if="sub" class="ms-auto">
+      <NuxtLink v-if="sub.link" :to="sub.link">
+        <SubInfo :sub="sub" />
+      </NuxtLink>
+      <template v-else>
+        <SubInfo :sub="sub" />
+      </template>
+    </div>
   </li>
 </template>
