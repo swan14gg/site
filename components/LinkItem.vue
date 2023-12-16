@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import unknown from "@/assets/img/unknown.png";
-
 export type LinkProps = {
-  emoji?: string;
-  iconUrl?: string;
   title: string;
   pageUrl: string;
   sub?: {
@@ -11,21 +7,19 @@ export type LinkProps = {
     alt: string;
     link: string;
   };
-};
+} & (
+  | { iconUrl: undefined; emoji: string }
+  | { iconUrl: string; emoji: undefined }
+);
+
 defineProps<LinkProps>();
 </script>
 
 <template>
   <li class="flex items-center p-2">
     <div class="me-2">
-      <span v-if="emoji">{{ emoji }}</span>
-      <img
-        v-else
-        :src="iconUrl ? iconUrl : unknown"
-        :alt="title"
-        width="20"
-        height="20"
-      />
+      <span v-if="emoji !== undefined">{{ emoji }}</span>
+      <img v-else :src="iconUrl" :alt="title" width="20" height="20" />
     </div>
     <NuxtLink :to="pageUrl" class="link">
       {{ title }}
