@@ -17,5 +17,5 @@ defineProps<{
     width="20"
     height="20"
   />
-  <span v-else>{{ sub.text }}</span>
+  <span v-else class="text-xs sm:text-base">{{ sub.text }}</span>
 </template>
