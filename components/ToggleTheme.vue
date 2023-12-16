@@ -15,6 +15,7 @@ function handleThemeChange(event: Event) {
       <font-awesome-icon icon="fa-solid fa-sun" class="w-5" />
     </ClientOnly>
     <label for="toggleTwo" class="flex items-center cursor-pointer select-none">
+      <span class="sr-only">ダークモード切替</span>
       <div class="relative">
         <input
           v-model="isDark"
