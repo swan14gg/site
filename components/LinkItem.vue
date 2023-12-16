@@ -27,24 +27,10 @@ defineProps<LinkProps>();
     </NuxtLink>
     <div v-if="sub" class="ms-auto">
       <NuxtLink v-if="sub.link" :to="sub.link">
-        <img
-          v-if="sub.iconUrl !== undefined"
-          :src="sub.iconUrl"
-          :alt="sub.alt"
-          width="20"
-          height="20"
-        />
-        <span v-else>{{ sub.text }}</span>
+        <SubInfo :sub="sub" />
       </NuxtLink>
       <template v-else>
-        <img
-          v-if="sub.iconUrl !== undefined"
-          :src="sub.iconUrl"
-          :alt="sub.alt"
-          width="20"
-          height="20"
-        />
-        <span v-else>{{ sub.text }}</span>
+        <SubInfo :sub="sub" />
       </template>
     </div>
   </li>
