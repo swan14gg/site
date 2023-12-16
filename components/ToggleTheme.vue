@@ -23,7 +23,9 @@ function handleThemeChange(event: Event) {
           class="peer sr-only"
           @change="handleThemeChange"
         />
-        <div class="w-12 h-7 rounded-full bg-gray-400"></div>
+        <div
+          class="w-12 h-7 rounded-full bg-gray-400 peer-focus:outline peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-primary"
+        ></div>
         <div
           class="absolute w-5 h-5 transition bg-white rounded-full left-1 top-1 peer-checked:translate-x-full peer-checked:bg-primary"
         ></div>
