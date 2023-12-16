@@ -3,10 +3,11 @@ export type LinkProps = {
   title: string;
   pageUrl: string;
   sub?: {
-    iconUrl: string;
-    alt: string;
-    link: string;
-  };
+    link?: string;
+  } & (
+    | { iconUrl: string; alt: string; text?: undefined }
+    | { iconUrl?: undefined; alt?: undefined; text: string }
+  );
 } & (
   | { iconUrl: undefined; emoji: string }
   | { iconUrl: string; emoji: undefined }
@@ -24,8 +25,27 @@ defineProps<LinkProps>();
     <NuxtLink :to="pageUrl" class="link">
       {{ title }}
     </NuxtLink>
-    <NuxtLink v-if="sub" :to="sub.link" class="ms-auto">
-      <img :src="sub.iconUrl" :alt="sub.alt" width="20" height="20" />
-    </NuxtLink>
+    <div v-if="sub" class="ms-auto">
+      <NuxtLink v-if="sub.link" :to="sub.link">
+        <img
+          v-if="sub.iconUrl !== undefined"
+          :src="sub.iconUrl"
+          :alt="sub.alt"
+          width="20"
+          height="20"
+        />
+        <span v-else>{{ sub.text }}</span>
+      </NuxtLink>
+      <template v-else>
+        <img
+          v-if="sub.iconUrl !== undefined"
+          :src="sub.iconUrl"
+          :alt="sub.alt"
+          width="20"
+          height="20"
+        />
+        <span v-else>{{ sub.text }}</span>
+      </template>
+    </div>
   </li>
 </template>
