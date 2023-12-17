@@ -1,5 +1,10 @@
 <template>
-  <Card id="privacy-policy" icon="user" title="Privacy Policy">
+  <Card
+    id="privacy-policy"
+    icon="user"
+    title="Privacy Policy"
+    :heading-level="1"
+  >
     <div class="space-y-4">
       <p>
         当サイトでは、Googleが提供するアクセス解析ツール「Googleアナリティクス」を利用しています。Googleアナリティクスは、当サイトへの訪問者の行動を理解するためにCookieを使用してデータを収集します。収集されるデータには、訪問者のサイト利用状況、滞在時間、使用されたブラウザの種類、閲覧したページなどが含まれますが、これらの情報はすべて匿名で処理され、個人を特定することはありません。
