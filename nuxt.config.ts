@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "ja",
+      },
       title: "swan14gg.dev",
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
