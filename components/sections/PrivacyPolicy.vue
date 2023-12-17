@@ -1,7 +1,7 @@
 <template>
   <Card
     id="privacy-policy"
-    icon="user"
+    icon="shield-halved"
     title="Privacy Policy"
     :heading-level="1"
   >

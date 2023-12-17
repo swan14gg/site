@@ -14,6 +14,7 @@ import {
   faSun,
   faMoon,
   faPersonChalkboard,
+  faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
@@ -26,6 +27,7 @@ library.add(faMusic);
 library.add(faSun);
 library.add(faMoon);
 library.add(faPersonChalkboard);
+library.add(faShieldHalved);
 
 config.autoAddCss = false;
 
