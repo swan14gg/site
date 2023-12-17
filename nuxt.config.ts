@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/color-mode", "nuxt-gtag"],
   colorMode: {
     classSuffix: "",
   },
@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "ja",
+      },
       title: "swan14gg.dev",
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,5 +31,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  gtag: {
+    id: "G-ESLBEJ5853",
   },
 });
