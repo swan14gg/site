@@ -1,13 +1,13 @@
 const useArticle = () => {
   const username = "swan14gg";
 
-  const fetchArticles = async (page: number, per_page: number = 5) => {
+  const fetchArticles = async (page: number, perPage: number = 5) => {
     return await useFetch<ArticleResponse>(
       `https://qiita.com/api/v2/users/${username}/items`,
       {
         params: {
           page,
-          per_page,
+          per_page: perPage,
         },
       },
     );
